@@ -1,0 +1,2 @@
+Used intellij for setup.. 
+Something to do with library setup and shit in vscode.
