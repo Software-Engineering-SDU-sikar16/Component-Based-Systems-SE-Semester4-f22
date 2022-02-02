@@ -100,7 +100,8 @@ public class Enemy extends SpaceObject {
 
     public void draw(ShapeRenderer sr) {
 
-        sr.setColor(1, 1, 1, 1);
+        // Values only between 0 and 1 and it apparently it uses floats hence the f. Find the normal rgb value and add "/255f"
+        sr.setColor(250/255f, 163/255f, 82/255f, 1);
 
         sr.begin(ShapeType.Line);
 
