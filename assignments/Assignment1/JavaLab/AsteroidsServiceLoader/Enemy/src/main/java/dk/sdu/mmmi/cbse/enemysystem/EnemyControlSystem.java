@@ -19,29 +19,26 @@ public class EnemyControlSystem implements IEntityProcessingService {
     public void process(GameData gameData, World world) {
 
         for (Entity enemy : world.getEntities(Enemy.class)) {
-
             PositionPart positionPart = enemy.getPart(PositionPart.class);
             MovingPart movingPart = enemy.getPart(MovingPart.class);
 
             // Random movement for the enemy taken off the web
             double randomMovement = (Math.random() * 100);
             if (randomMovement < 40) {
-                movingPart.setLeft(false);
-                movingPart.setRight(false);
                 movingPart.setUp(true);
             } else if (randomMovement > 50 && randomMovement < 90) {
-                movingPart.setLeft(false);
                 movingPart.setRight(true);
-                movingPart.setUp(false);
             } else if (randomMovement > 40 && randomMovement < 50) {
                 movingPart.setLeft(true);
-                movingPart.setRight(false);
-                movingPart.setUp(false);
             }
 
             movingPart.process(gameData, enemy);
             positionPart.process(gameData, enemy);
             updateShape(enemy);
+
+            movingPart.setLeft(false);
+            movingPart.setRight(false);
+            movingPart.setUp(false);
         }
     }
 
