@@ -6,8 +6,7 @@
     xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd"
 >
     
-    <bean id="playerControlSystemBean" class="dk.sdu.mmmi.cbse.playersystem.PlayerControlSystem"/>
-    <bean id="playerPluginBean" class="dk.sdu.mmmi.cbse.playersystem.PlayerPlugin"/>
+    <bean id="colliderBean" class="dk.sdu.mmmi.cbse.collision.Collider"/>
     
 </beans>
 

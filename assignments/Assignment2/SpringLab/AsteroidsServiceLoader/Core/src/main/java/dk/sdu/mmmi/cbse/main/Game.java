@@ -5,6 +5,9 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.graphics.glutils.ShapeRenderer;
+import dk.sdu.mmmi.cbse.asteroid.AsteroidControlSystem;
+import dk.sdu.mmmi.cbse.asteroid.AsteroidPlugin;
+import dk.sdu.mmmi.cbse.collision.Collider;
 import dk.sdu.mmmi.cbse.common.data.Entity;
 import dk.sdu.mmmi.cbse.common.data.GameData;
 import dk.sdu.mmmi.cbse.common.data.World;
@@ -13,9 +16,13 @@ import dk.sdu.mmmi.cbse.common.services.IGamePluginService;
 import dk.sdu.mmmi.cbse.common.services.IPostEntityProcessingService;
 import dk.sdu.mmmi.cbse.common.util.SPILocator;
 import dk.sdu.mmmi.cbse.managers.GameInputProcessor;
+import dk.sdu.mmmi.cbse.playersystem.PlayerControlSystem;
+import dk.sdu.mmmi.cbse.playersystem.PlayerPlugin;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class Game
         implements ApplicationListener {
@@ -24,9 +31,11 @@ public class Game
     private ShapeRenderer sr;
 
     private final GameData gameData = new GameData();
+    private ArrayList<IGamePluginService> pluginProcessors = new ArrayList<>();
     private List<IEntityProcessingService> entityProcessors = new ArrayList<>();
     private List<IPostEntityProcessingService> postEntityProcessors = new ArrayList<>();
     private World world = new World();
+    ApplicationContext context = new ClassPathXmlApplicationContext("CoreBeans.xml");
 
     @Override
     public void create() {
@@ -44,6 +53,20 @@ public class Game
                 new GameInputProcessor(gameData)
         );
 
+        
+        IGamePluginService asteroidPlugin = (AsteroidPlugin) context.getBean("asteroidPluginBean");
+        IEntityProcessingService asteroidService = (AsteroidControlSystem) context.getBean("asteroidControlSystemBean");
+        pluginProcessors.add(asteroidPlugin);
+        entityProcessors.add(asteroidService);
+        
+        IPostEntityProcessingService collidorPlugin = (Collider) context.getBean("colliderBean");
+        postEntityProcessors.add(collidorPlugin);
+        
+        IGamePluginService playerPlugin = (PlayerPlugin) context.getBean("playerPluginBean");
+        IEntityProcessingService playerService = (PlayerControlSystem) context.getBean("playerControlSystemBean");
+        pluginProcessors.add(playerPlugin);
+        entityProcessors.add(playerService);
+        
         // Lookup all Game Plugins using ServiceLoader
         for (IGamePluginService iGamePlugin : getPluginServices()) {
             iGamePlugin.start(gameData, world);

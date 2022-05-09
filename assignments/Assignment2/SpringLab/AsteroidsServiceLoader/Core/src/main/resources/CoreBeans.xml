@@ -6,8 +6,9 @@
     xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd"
 >
     
-    <bean id="playerControlSystemBean" class="dk.sdu.mmmi.cbse.playersystem.PlayerControlSystem"/>
-    <bean id="playerPluginBean" class="dk.sdu.mmmi.cbse.playersystem.PlayerPlugin"/>
+    <import resource="AsteroidBeans.xml" />
+    <import resource="CollisionBeans.xml" />
+    <import resource="PlayerBeans.xml" />  
     
 </beans>
 
