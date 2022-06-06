@@ -6,7 +6,6 @@
 package dk.sdu.mmmi.cbse.asteroid;
 
 /**
- *
  * @author Phillip O
  */
 public enum AsteroidType {

@@ -1,6 +1,7 @@
 package dk.sdu.mmmi.cbse.common.data;
 
 import dk.sdu.mmmi.cbse.common.data.entityparts.EntityPart;
+
 import java.io.Serializable;
 import java.util.Map;
 import java.util.UUID;
@@ -35,12 +36,12 @@ public class Entity implements Serializable {
         return (E) parts.get(partClass);
     }
 
-    public void setRadius(float r) {
-        this.radius = r;
-    }
-
     public float getRadius() {
         return radius;
+    }
+
+    public void setRadius(float r) {
+        this.radius = r;
     }
 
     public String getID() {
@@ -78,8 +79,8 @@ public class Entity implements Serializable {
     public void setBoundingCircleY(float boundingCircleY) {
         this.boundingCircleY = boundingCircleY;
     }
-    
-    
+
+
     public boolean checkCollision(Entity entity) {
         float dx = this.boundingCircleX - entity.boundingCircleX;
         float dy = this.boundingCircleY - entity.boundingCircleY;

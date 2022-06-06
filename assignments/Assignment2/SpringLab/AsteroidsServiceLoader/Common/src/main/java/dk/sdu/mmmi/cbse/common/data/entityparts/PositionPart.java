@@ -9,7 +9,6 @@ import dk.sdu.mmmi.cbse.common.data.Entity;
 import dk.sdu.mmmi.cbse.common.data.GameData;
 
 /**
- *
  * @author Alexander
  */
 public class PositionPart implements EntityPart {
@@ -28,20 +27,24 @@ public class PositionPart implements EntityPart {
         return x;
     }
 
+    public void setX(float newX) {
+        this.x = newX;
+    }
+
     public float getY() {
         return y;
+    }
+
+    public void setY(float newY) {
+        this.y = newY;
     }
 
     public float getRadians() {
         return radians;
     }
-    
-    public void setX(float newX) {
-        this.x = newX;
-    }
-    
-    public void setY(float newY) {
-        this.y = newY;
+
+    public void setRadians(float radians) {
+        this.radians = radians;
     }
 
     public void setPosition(float newX, float newY) {
@@ -49,15 +52,9 @@ public class PositionPart implements EntityPart {
         this.y = newY;
     }
 
-    public void setRadians(float radians) {
-        this.radians = radians;
-    }
-
     @Override
     public void process(GameData gameData, Entity entity) {
     }
-    
-    
-    
-    
+
+
 }

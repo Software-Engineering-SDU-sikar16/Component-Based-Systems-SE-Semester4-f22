@@ -5,37 +5,31 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.graphics.glutils.ShapeRenderer;
-import dk.sdu.mmmi.cbse.asteroid.AsteroidControlSystem;
-import dk.sdu.mmmi.cbse.asteroid.AsteroidPlugin;
-import dk.sdu.mmmi.cbse.collision.Collider;
 import dk.sdu.mmmi.cbse.common.data.Entity;
 import dk.sdu.mmmi.cbse.common.data.GameData;
 import dk.sdu.mmmi.cbse.common.data.World;
 import dk.sdu.mmmi.cbse.common.services.IEntityProcessingService;
 import dk.sdu.mmmi.cbse.common.services.IGamePluginService;
 import dk.sdu.mmmi.cbse.common.services.IPostEntityProcessingService;
-import dk.sdu.mmmi.cbse.common.util.SPILocator;
 import dk.sdu.mmmi.cbse.managers.GameInputProcessor;
-import dk.sdu.mmmi.cbse.playersystem.PlayerControlSystem;
-import dk.sdu.mmmi.cbse.playersystem.PlayerPlugin;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class Game
         implements ApplicationListener {
 
     private static OrthographicCamera cam;
-    private ShapeRenderer sr;
-
     private final GameData gameData = new GameData();
-    private ArrayList<IGamePluginService> pluginProcessors = new ArrayList<>();
-    private List<IEntityProcessingService> entityProcessors = new ArrayList<>();
-    private List<IPostEntityProcessingService> postEntityProcessors = new ArrayList<>();
-    private World world = new World();
+    private final ArrayList<IGamePluginService> pluginProcessors = new ArrayList<>();
+    private final List<IEntityProcessingService> entityProcessors = new ArrayList<>();
+    private final List<IPostEntityProcessingService> postEntityProcessors = new ArrayList<>();
+    private final World world = new World();
     ApplicationContext context = new ClassPathXmlApplicationContext("CoreBeans.xml");
+    private ShapeRenderer sr;
 
     @Override
     public void create() {
@@ -53,7 +47,7 @@ public class Game
                 new GameInputProcessor(gameData)
         );
 
-        
+
 //        IGamePluginService asteroidPlugin = (AsteroidPlugin) context.getBean("asteroidPluginBean");
 //        IEntityProcessingService asteroidService = (AsteroidControlSystem) context.getBean("asteroidControlSystemBean");
 //        pluginProcessors.add(asteroidPlugin);
@@ -66,7 +60,7 @@ public class Game
 //        IEntityProcessingService playerService = (PlayerControlSystem) context.getBean("playerControlSystemBean");
 //        pluginProcessors.add(playerPlugin);
 //        entityProcessors.add(playerService);
-        
+
         // Lookup all Game Plugins using ServiceLoader
         for (IGamePluginService iGamePlugin : getPluginServices()) {
             iGamePlugin.start(gameData, world);
@@ -79,13 +73,10 @@ public class Game
         // clear screen to black
         Gdx.gl.glClearColor(0, 0, 0, 1);
         Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
-
         gameData.setDelta(Gdx.graphics.getDeltaTime());
 
         update();
-
         draw();
-
         gameData.getKeys().update();
     }
 
@@ -94,7 +85,7 @@ public class Game
         for (IEntityProcessingService entityProcessorService : getEntityProcessingServices()) {
             entityProcessorService.process(gameData, world);
         }
-         for (IPostEntityProcessingService postEntityProcessorService : getPostEntityProcessingServices()) {
+        for (IPostEntityProcessingService postEntityProcessorService : getPostEntityProcessingServices()) {
             postEntityProcessorService.process(gameData, world);
         }
     }
@@ -103,15 +94,13 @@ public class Game
         for (Entity entity : world.getEntities()) {
 
             sr.setColor(1, 1, 1, 1);
-
             sr.begin(ShapeRenderer.ShapeType.Line);
-
             float[] shapex = entity.getShapeX();
             float[] shapey = entity.getShapeY();
 
             for (int i = 0, j = shapex.length - 1;
-                    i < shapex.length;
-                    j = i++) {
+                 i < shapex.length;
+                 j = i++) {
 
                 sr.line(shapex[i], shapey[i], shapex[j], shapey[j]);
             }
