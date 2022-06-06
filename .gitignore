@@ -1,5 +1,6 @@
 .DS_Store
-#.idea
+#**/.idea/libraries/*
+.idea
 target
 **/target/
 nbproject
@@ -7,3 +8,4 @@ nbproject
 *.zip
 *.class
 *.log
+workspace.xml
