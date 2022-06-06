@@ -54,18 +54,18 @@ public class Game
         );
 
         
-        IGamePluginService asteroidPlugin = (AsteroidPlugin) context.getBean("asteroidPluginBean");
-        IEntityProcessingService asteroidService = (AsteroidControlSystem) context.getBean("asteroidControlSystemBean");
-        pluginProcessors.add(asteroidPlugin);
-        entityProcessors.add(asteroidService);
-        
-        IPostEntityProcessingService collidorPlugin = (Collider) context.getBean("colliderBean");
-        postEntityProcessors.add(collidorPlugin);
-        
-        IGamePluginService playerPlugin = (PlayerPlugin) context.getBean("playerPluginBean");
-        IEntityProcessingService playerService = (PlayerControlSystem) context.getBean("playerControlSystemBean");
-        pluginProcessors.add(playerPlugin);
-        entityProcessors.add(playerService);
+//        IGamePluginService asteroidPlugin = (AsteroidPlugin) context.getBean("asteroidPluginBean");
+//        IEntityProcessingService asteroidService = (AsteroidControlSystem) context.getBean("asteroidControlSystemBean");
+//        pluginProcessors.add(asteroidPlugin);
+//        entityProcessors.add(asteroidService);
+//
+//        IPostEntityProcessingService collidorPlugin = (Collider) context.getBean("colliderBean");
+//        postEntityProcessors.add(collidorPlugin);
+//
+//        IGamePluginService playerPlugin = (PlayerPlugin) context.getBean("playerPluginBean");
+//        IEntityProcessingService playerService = (PlayerControlSystem) context.getBean("playerControlSystemBean");
+//        pluginProcessors.add(playerPlugin);
+//        entityProcessors.add(playerService);
         
         // Lookup all Game Plugins using ServiceLoader
         for (IGamePluginService iGamePlugin : getPluginServices()) {
@@ -136,15 +136,29 @@ public class Game
     public void dispose() {
     }
 
+    // From JavaLab
+//    private Collection<? extends IGamePluginService> getPluginServices() {
+//        return SPILocator.locateAll(IGamePluginService.class);
+//    }
+//
+//    private Collection<? extends IEntityProcessingService> getEntityProcessingServices() {
+//        return SPILocator.locateAll(IEntityProcessingService.class);
+//    }
+//
+//       private Collection<? extends IPostEntityProcessingService> getPostEntityProcessingServices() {
+//        return SPILocator.locateAll(IPostEntityProcessingService.class);
+//    }
+
+    // For finding beans
     private Collection<? extends IGamePluginService> getPluginServices() {
-        return SPILocator.locateAll(IGamePluginService.class);
+        return context.getBeansOfType(IGamePluginService.class).values();
     }
 
     private Collection<? extends IEntityProcessingService> getEntityProcessingServices() {
-        return SPILocator.locateAll(IEntityProcessingService.class);
+        return context.getBeansOfType(IEntityProcessingService.class).values();
     }
-    
-       private Collection<? extends IPostEntityProcessingService> getPostEntityProcessingServices() {
-        return SPILocator.locateAll(IPostEntityProcessingService.class);
+
+    private Collection<? extends IPostEntityProcessingService> getPostEntityProcessingServices() {
+        return context.getBeansOfType(IPostEntityProcessingService.class).values();
     }
 }
