@@ -125,7 +125,7 @@ public class Game
     public void dispose() {
     }
 
-    // From JavaLab
+    // From JavaLab for whiteboard ServiceProviderInterface lookup
 //    private Collection<? extends IGamePluginService> getPluginServices() {
 //        return SPILocator.locateAll(IGamePluginService.class);
 //    }
@@ -138,7 +138,7 @@ public class Game
 //        return SPILocator.locateAll(IPostEntityProcessingService.class);
 //    }
 
-    // For finding beans
+    // For finding beans. Spring locator is a modified version of the one in JavaLab
     private Collection<? extends IGamePluginService> getPluginServices() {
         return context.getBeansOfType(IGamePluginService.class).values();
     }
