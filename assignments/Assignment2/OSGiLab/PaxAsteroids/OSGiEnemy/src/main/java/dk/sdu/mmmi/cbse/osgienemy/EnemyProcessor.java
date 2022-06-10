@@ -13,7 +13,6 @@ public class EnemyProcessor implements IEntityProcessingService {
 
     private BulletSPI bulletService;
 
-
     @Override
     public void process(GameData gameData, World world) {
 

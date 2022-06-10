@@ -60,6 +60,7 @@
       <module>OSGiLaser</module>
       <module>OSGiEnemy</module>
       <module>OSGiLibGDX</module>
+      <module>OSGiPlayer</module>
   </modules>
       
   <build>
