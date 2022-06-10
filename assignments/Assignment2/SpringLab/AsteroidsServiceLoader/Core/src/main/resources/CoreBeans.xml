@@ -6,9 +6,17 @@
         xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd"
 >
 
-    <import resource="AsteroidBeans.xml"/>
-    <import resource="CollisionBeans.xml"/>
-    <import resource="PlayerBeans.xml"/>
+<!--    <import resource="AsteroidBeans.xml"/>-->
+<!--    <import resource="CollisionBeans.xml"/>-->
+<!--    <import resource="PlayerBeans.xml"/>-->
+
+    <bean id="asteroidControlSystemBean" class="dk.sdu.mmmi.cbse.asteroid.AsteroidControlSystem"/>
+    <bean id="asteroidPluginBean" class="dk.sdu.mmmi.cbse.asteroid.AsteroidPlugin"/>
+
+    <bean id="colliderBean" class="dk.sdu.mmmi.cbse.collision.Collider"/>
+
+    <bean id="playerControlSystemBean" class="dk.sdu.mmmi.cbse.playersystem.PlayerControlSystem"/>
+    <bean id="playerPluginBean" class="dk.sdu.mmmi.cbse.playersystem.PlayerPlugin"/>
 
 </beans>
 
