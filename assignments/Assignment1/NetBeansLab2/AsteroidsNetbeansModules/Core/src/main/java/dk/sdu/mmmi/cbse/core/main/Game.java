@@ -23,10 +23,12 @@ public class Game implements ApplicationListener {
 
     private static OrthographicCamera cam;
     private ShapeRenderer sr;
+    // LookupListener is used to listen for changes in the lookup of the Game class.
     private final Lookup lookup = Lookup.getDefault();
     private final GameData gameData = new GameData();
     private World world = new World();
     private List<IGamePluginService> gamePlugins = new CopyOnWriteArrayList<>();
+    // the lookup listener is used to detect when new game plugins are added
     private Lookup.Result<IGamePluginService> result;
 
     @Override
