@@ -1,7 +1,6 @@
 .DS_Store
 target
-**/target/
-**/cache/
+cache
 nbproject
 .gradle
 *.zip
