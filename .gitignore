@@ -3,9 +3,11 @@
 .idea
 target
 **/target/
+**/cache/
 nbproject
 .gradle
 *.zip
 *.class
 *.log
+*.jar
 workspace.xml
