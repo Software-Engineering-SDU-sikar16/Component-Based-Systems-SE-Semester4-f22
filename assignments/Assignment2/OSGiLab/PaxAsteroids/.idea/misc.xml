@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="Osmorc" url="file://$PROJECT_DIR$/OSGiAsteroids" />
+    <file type="Osmorc" url="file://$PROJECT_DIR$/OSGiAsteroidSplitter" />
+    <file type="Osmorc" url="file://$PROJECT_DIR$/OSGiCommon" />
+    <file type="Osmorc" url="file://$PROJECT_DIR$/OSGiCommonAsteroids" />
+    <file type="Osmorc" url="file://$PROJECT_DIR$/OSGiCommonBullet" />
+    <file type="Osmorc" url="file://$PROJECT_DIR$/OSGiCommonEnemy" />
+    <file type="Osmorc" url="file://$PROJECT_DIR$/OSGiCore" />
+    <file type="Osmorc" url="file://$PROJECT_DIR$/OSGiEnemy" />
+    <file type="Osmorc" url="file://$PROJECT_DIR$/OSGiLaser" />
+    <file type="Osmorc" url="file://$PROJECT_DIR$/OSGiLibGDX" />
+    <file type="Osmorc" url="file://$PROJECT_DIR$/OSGiPlayer" />
+  </component>
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK" />
+  <component name="ProjectType">
+    <option name="id" value="jpab" />
+  </component>
+</project>

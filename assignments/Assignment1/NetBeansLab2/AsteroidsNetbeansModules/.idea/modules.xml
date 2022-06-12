@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Asteroid/Asteroid.iml" filepath="$PROJECT_DIR$/Asteroid/Asteroid.iml" />
+      <module fileurl="file://$PROJECT_DIR$/application/AsteroidsNetbeansModules-app.iml" filepath="$PROJECT_DIR$/application/AsteroidsNetbeansModules-app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/branding/AsteroidsNetbeansModules-branding.iml" filepath="$PROJECT_DIR$/branding/AsteroidsNetbeansModules-branding.iml" />
+      <module fileurl="file://$PROJECT_DIR$/AsteroidsNetbeansModules-parent.iml" filepath="$PROJECT_DIR$/AsteroidsNetbeansModules-parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Bullet/Bullet.iml" filepath="$PROJECT_DIR$/Bullet/Bullet.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Collision/Collision.iml" filepath="$PROJECT_DIR$/Collision/Collision.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Common/Common.iml" filepath="$PROJECT_DIR$/Common/Common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/CommonAsteroids/CommonAsteroids.iml" filepath="$PROJECT_DIR$/CommonAsteroids/CommonAsteroids.iml" />
+      <module fileurl="file://$PROJECT_DIR$/CommonBullet/CommonBullet.iml" filepath="$PROJECT_DIR$/CommonBullet/CommonBullet.iml" />
+      <module fileurl="file://$PROJECT_DIR$/CommonEnemy/CommonEnemy.iml" filepath="$PROJECT_DIR$/CommonEnemy/CommonEnemy.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Core/Core.iml" filepath="$PROJECT_DIR$/Core/Core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Enemy/Enemy.iml" filepath="$PROJECT_DIR$/Enemy/Enemy.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Player/Player.iml" filepath="$PROJECT_DIR$/Player/Player.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SilentUpdate/SilentUpdate.iml" filepath="$PROJECT_DIR$/SilentUpdate/SilentUpdate.iml" />
+    </modules>
+  </component>
+</project>

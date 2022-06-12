@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/OSGiAsteroidSplitter/OSGiAsteroidSplitter.iml" filepath="$PROJECT_DIR$/OSGiAsteroidSplitter/OSGiAsteroidSplitter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/OSGiAsteroids/OSGiAsteroids.iml" filepath="$PROJECT_DIR$/OSGiAsteroids/OSGiAsteroids.iml" />
+      <module fileurl="file://$PROJECT_DIR$/OSGiCommon/OSGiCommon.iml" filepath="$PROJECT_DIR$/OSGiCommon/OSGiCommon.iml" />
+      <module fileurl="file://$PROJECT_DIR$/OSGiCommonAsteroids/OSGiCommonAsteroids.iml" filepath="$PROJECT_DIR$/OSGiCommonAsteroids/OSGiCommonAsteroids.iml" />
+      <module fileurl="file://$PROJECT_DIR$/OSGiCommonBullet/OSGiCommonBullet.iml" filepath="$PROJECT_DIR$/OSGiCommonBullet/OSGiCommonBullet.iml" />
+      <module fileurl="file://$PROJECT_DIR$/OSGiCommonEnemy/OSGiCommonEnemy.iml" filepath="$PROJECT_DIR$/OSGiCommonEnemy/OSGiCommonEnemy.iml" />
+      <module fileurl="file://$PROJECT_DIR$/OSGiCore/OSGiCore.iml" filepath="$PROJECT_DIR$/OSGiCore/OSGiCore.iml" />
+      <module fileurl="file://$PROJECT_DIR$/OSGiEnemy/OSGiEnemy.iml" filepath="$PROJECT_DIR$/OSGiEnemy/OSGiEnemy.iml" />
+      <module fileurl="file://$PROJECT_DIR$/OSGiLaser/OSGiLaser.iml" filepath="$PROJECT_DIR$/OSGiLaser/OSGiLaser.iml" />
+      <module fileurl="file://$PROJECT_DIR$/OSGiLibGDX/OSGiLibGDX.iml" filepath="$PROJECT_DIR$/OSGiLibGDX/OSGiLibGDX.iml" />
+      <module fileurl="file://$PROJECT_DIR$/OSGiPlayer/OSGiPlayer.iml" filepath="$PROJECT_DIR$/OSGiPlayer/OSGiPlayer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PaxAteroids.iml" filepath="$PROJECT_DIR$/PaxAteroids.iml" />
+      <module fileurl="file://$PROJECT_DIR$/poms/compiled/compiled-bundle-settings.iml" filepath="$PROJECT_DIR$/poms/compiled/compiled-bundle-settings.iml" />
+      <module fileurl="file://$PROJECT_DIR$/provision/provision.iml" filepath="$PROJECT_DIR$/provision/provision.iml" />
+      <module fileurl="file://$PROJECT_DIR$/poms/shared-plugin-settings.iml" filepath="$PROJECT_DIR$/poms/shared-plugin-settings.iml" />
+      <module fileurl="file://$PROJECT_DIR$/poms/wrappers/wrapper-bundle-settings.iml" filepath="$PROJECT_DIR$/poms/wrappers/wrapper-bundle-settings.iml" />
+    </modules>
+  </component>
+</project>

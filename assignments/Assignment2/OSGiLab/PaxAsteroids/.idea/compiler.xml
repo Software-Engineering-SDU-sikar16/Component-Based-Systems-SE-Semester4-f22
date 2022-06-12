@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="OSGiAsteroids" />
+        <module name="OSGiEnemy" />
+        <module name="OSGiCore" />
+        <module name="OSGiLaser" />
+        <module name="OSGiCommonEnemy" />
+        <module name="OSGiAsteroidSplitter" />
+        <module name="OSGiPlayer" />
+        <module name="OSGiCommonBullet" />
+        <module name="OSGiCommonAsteroids" />
+        <module name="OSGiLibGDX" />
+        <module name="OSGiCommon" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="compiled-bundle-settings" target="1.8" />
+      <module name="OSGiAsteroids" target="1.8" />
+      <module name="OSGiAsteroidSplitter" target="1.8" />
+      <module name="OSGiCommon" target="1.8" />
+      <module name="OSGiCommonAsteroids" target="1.8" />
+      <module name="OSGiCommonBullet" target="1.8" />
+      <module name="OSGiCommonEnemy" target="1.8" />
+      <module name="OSGiCore" target="1.8" />
+      <module name="OSGiEnemy" target="1.8" />
+      <module name="OSGiLaser" target="1.8" />
+      <module name="OSGiLibGDX" target="1.8" />
+      <module name="OSGiPlayer" target="1.8" />
+      <module name="PaxAteroids" target="1.8" />
+      <module name="player" target="1.8" />
+      <module name="provision" target="1.8" />
+      <module name="shared-plugin-settings" target="1.8" />
+      <module name="wrapper-bundle-settings" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="Bullet" />
+        <module name="Player" />
+        <module name="CommonEnemy" />
+        <module name="SilentUpdate" />
+        <module name="Collision" />
+        <module name="CommonAsteroids" />
+        <module name="CommonBullet" />
+        <module name="Common" />
+        <module name="AsteroidsNetbeansModules-app" />
+        <module name="Asteroid" />
+        <module name="AsteroidsNetbeansModules-branding" />
+        <module name="Enemy" />
+        <module name="Core" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="Asteroid" target="1.8" />
+      <module name="AsteroidsNetbeansModules-app" target="1.8" />
+      <module name="AsteroidsNetbeansModules-app (1) (dk.sdu.mmmi.cbse)" target="1.8" />
+      <module name="AsteroidsNetbeansModules-app (2) (dk.sdu.mmi)" target="1.8" />
+      <module name="AsteroidsNetbeansModules-branding" target="1.8" />
+      <module name="AsteroidsNetbeansModules-branding (1) (dk.sdu.mmi)" target="1.8" />
+      <module name="AsteroidsNetbeansModules-branding (2) (dk.sdu.mmmi.cbse)" target="1.8" />
+      <module name="AsteroidsNetbeansModules-parent" target="1.5" />
+      <module name="AsteroidsNetbeansModules-parent (1) (dk.sdu.mmi)" target="1.5" />
+      <module name="AsteroidsNetbeansModules-parent (2) (dk.sdu.mmmi.cbse)" target="1.5" />
+      <module name="Bullet" target="1.8" />
+      <module name="Collision" target="1.8" />
+      <module name="Common" target="1.8" />
+      <module name="CommonAsteroids" target="1.8" />
+      <module name="CommonBullet" target="1.8" />
+      <module name="CommonEnemy" target="1.8" />
+      <module name="Core" target="1.8" />
+      <module name="Enemy" target="1.8" />
+      <module name="Player" target="1.8" />
+      <module name="SilentUpdate" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
