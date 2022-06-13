@@ -28,7 +28,6 @@ public class Game implements ApplicationListener {
     private final GameData gameData = new GameData();
     private World world = new World();
     private List<IGamePluginService> gamePlugins = new CopyOnWriteArrayList<>();
-    // the lookup listener is used to detect when new game plugins are added
     private Lookup.Result<IGamePluginService> result;
 
     @Override
@@ -48,6 +47,7 @@ public class Game implements ApplicationListener {
         result.addLookupListener(lookupListener);
         result.allItems();
 
+        // Initialize the game plugins
         for (IGamePluginService plugin : result.allInstances()) {
             plugin.start(gameData, world);
             gamePlugins.add(plugin);
@@ -115,6 +115,7 @@ public class Game implements ApplicationListener {
     public void dispose() {
     }
 
+    // This method is used to get all the game plugins.
     private Collection<? extends IEntityProcessingService> getEntityProcessingServices() {
         return lookup.lookupAll(IEntityProcessingService.class);
     }
@@ -123,6 +124,7 @@ public class Game implements ApplicationListener {
         return lookup.lookupAll(IPostEntityProcessingService.class);
     }
 
+    // the lookup listener is used to detect when new game plugins are added/removed.
     private final LookupListener lookupListener = new LookupListener() {
         @Override
         public void resultChanged(LookupEvent le) {

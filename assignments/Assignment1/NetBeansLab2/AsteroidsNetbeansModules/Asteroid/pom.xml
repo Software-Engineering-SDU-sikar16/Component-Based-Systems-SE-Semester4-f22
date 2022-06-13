@@ -6,8 +6,10 @@
         <artifactId>AsteroidsNetbeansModules-parent</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
+
     <artifactId>Asteroid</artifactId>
     <packaging>nbm</packaging>
+
     <build>
         <plugins>
             <plugin>
