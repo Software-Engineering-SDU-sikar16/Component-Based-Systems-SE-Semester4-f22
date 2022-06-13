@@ -10,6 +10,7 @@ import dk.sdu.mmmi.cbse.common.data.entityparts.MovingPart;
 import dk.sdu.mmmi.cbse.common.data.entityparts.PositionPart;
 import dk.sdu.mmmi.cbse.common.data.entityparts.TimerPart;
 import dk.sdu.mmmi.cbse.common.services.IEntityProcessingService;
+
 import static java.lang.Math.cos;
 import static java.lang.Math.sin;
 
@@ -54,7 +55,7 @@ public class LaserSystem implements IEntityProcessingService, BulletSPI {
 
         float bx = (float) cos(radians) * shooter.getRadius() * bullet.getRadius();
         float by = (float) sin(radians) * shooter.getRadius() * bullet.getRadius();
-        
+
 
         bullet.add(new PositionPart(bx + x, by + y, radians));
         bullet.add(new LifePart(1));

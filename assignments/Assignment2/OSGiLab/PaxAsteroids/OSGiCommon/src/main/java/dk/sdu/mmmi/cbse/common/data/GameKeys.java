@@ -2,10 +2,6 @@ package dk.sdu.mmmi.cbse.common.data;
 
 public class GameKeys {
 
-    private static boolean[] keys;
-    private static boolean[] pkeys;
-
-    private static final int NUM_KEYS = 8;
     public static final int UP = 0;
     public static final int LEFT = 1;
     public static final int DOWN = 2;
@@ -14,6 +10,9 @@ public class GameKeys {
     public static final int ESCAPE = 5;
     public static final int SPACE = 6;
     public static final int SHIFT = 7;
+    private static final int NUM_KEYS = 8;
+    private static boolean[] keys;
+    private static boolean[] pkeys;
 
     public GameKeys() {
         keys = new boolean[NUM_KEYS];

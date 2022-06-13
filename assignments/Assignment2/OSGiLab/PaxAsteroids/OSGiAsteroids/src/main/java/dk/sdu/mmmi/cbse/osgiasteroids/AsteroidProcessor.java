@@ -12,34 +12,34 @@ import dk.sdu.mmmi.cbse.common.services.IEntityProcessingService;
 
 public class AsteroidProcessor implements IEntityProcessingService {
 
-    
+
     private IAsteroidSplitter asteroidSplitter;
 
     @Override
     public void process(GameData gameData, World world) {
 
-       for (Entity asteroid : world.getEntities(Asteroid.class)) {
+        for (Entity asteroid : world.getEntities(Asteroid.class)) {
             PositionPart positionPart = asteroid.getPart(PositionPart.class);
             MovingPart movingPart = asteroid.getPart(MovingPart.class);
             LifePart lifePart = asteroid.getPart(LifePart.class);
-            
-            
+
+
             int numPoints = 12;
             float speed = (float) Math.random() * 10f + 20f;
             if (lifePart.getLife() == 1) {
                 numPoints = 8;
                 speed = (float) Math.random() * 30f + 70f;
-            } else if (lifePart.getLife()  == 2) {
+            } else if (lifePart.getLife() == 2) {
                 numPoints = 10;
                 speed = (float) Math.random() * 10f + 50f;
             }
             movingPart.setSpeed(speed);
             movingPart.setUp(true);
-           
-         
+
+
             movingPart.process(gameData, asteroid);
             positionPart.process(gameData, asteroid);
-            
+
 
             // Split event
             if (lifePart.isHit()) {
@@ -52,6 +52,7 @@ public class AsteroidProcessor implements IEntityProcessingService {
 
     /**
      * Dependency Injection using OSGi Declarative Services
+     *
      * @param asteroidSplitter
      */
     public void setAsteroidSplitter(IAsteroidSplitter asteroidSplitter) {

@@ -20,7 +20,7 @@ public class EnemyPlugin implements IGamePluginService {
         // Add entities to the world
         Entity enemy = createEnemyShip(gameData);
         enemyID = world.addEntity(enemy);
-        
+
     }
 
     private Entity createEnemyShip(GameData gameData) {
@@ -37,7 +37,7 @@ public class EnemyPlugin implements IGamePluginService {
         enemyShip.setRadius(4);
         enemyShip.add(new MovingPart(deacceleration, acceleration, maxSpeed, rotationSpeed));
         enemyShip.add(new PositionPart(x, y, radians));
-        
+
         return enemyShip;
     }
 

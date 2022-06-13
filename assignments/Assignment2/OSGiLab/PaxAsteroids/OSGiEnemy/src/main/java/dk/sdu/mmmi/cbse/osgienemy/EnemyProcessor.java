@@ -24,14 +24,14 @@ public class EnemyProcessor implements IEntityProcessingService {
             movingPart.setLeft(random < 0.2);
             movingPart.setRight(random > 0.3 && random < 0.5);
             movingPart.setUp(random > 0.7 && random < 0.9);
-            
+
             if (random > 0.98 && bulletService != null) {
                 Entity bullet = bulletService.createBullet(entity, gameData);
                 world.addEntity(bullet);
             }
-            
+
             movingPart.process(gameData, entity);
-            positionPart.process(gameData, entity);            
+            positionPart.process(gameData, entity);
             updateShape(entity);
 
         }
