@@ -44,7 +44,7 @@ public class Game
                 new GameInputProcessor(gameData)
         );
 
-        // Lookup all Game Plugins using ServiceLoader
+        // Lookup all Game Plugins using ServiceLoader and creates them
         for (IGamePluginService iGamePlugin : getPluginServices()) {
             iGamePlugin.start(gameData, world);
         }
@@ -120,7 +120,7 @@ public class Game
     private Collection<? extends IEntityProcessingService> getEntityProcessingServices() {
         return SPILocator.locateAll(IEntityProcessingService.class);
     }
-    
+
        private Collection<? extends IPostEntityProcessingService> getPostEntityProcessingServices() {
         return SPILocator.locateAll(IPostEntityProcessingService.class);
     }

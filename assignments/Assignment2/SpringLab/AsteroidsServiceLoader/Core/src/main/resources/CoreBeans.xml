@@ -12,6 +12,7 @@
 
     <bean id="asteroidControlSystemBean" class="dk.sdu.mmmi.cbse.asteroid.AsteroidControlSystem"/>
     <bean id="asteroidPluginBean" class="dk.sdu.mmmi.cbse.asteroid.AsteroidPlugin"/>
+    <bean id="asteroidSplitterBean" class="dk.sdu.mmmi.cbse.asteroid.AsteroidSplitter"/>
 
     <bean id="colliderBean" class="dk.sdu.mmmi.cbse.collision.Collider"/>
 
